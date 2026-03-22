@@ -1,5 +1,5 @@
 {
-  "name": "@org/date",
+  "name": "@org/common/date",
   "version": "0.0.1",
   "private": true,
   "type": "commonjs",
