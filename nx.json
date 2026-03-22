@@ -2,10 +2,7 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "analytics": false,
   "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
@@ -41,10 +38,15 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": [
-        "apps/org-e2e/**/*"
-      ]
+      "exclude": ["apps/org-e2e/**/*"]
     }
   ],
-  "neverConnectToCloud": true
+  "neverConnectToCloud": true,
+  "targetDefaults": {
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    }
+  }
 }
