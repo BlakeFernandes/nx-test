@@ -17,7 +17,8 @@
     "paths": {
       "@org/common/core": ["libs/common/core/src/index.ts"],
       "@org/common/date": ["libs/common/date/src/index.ts"],
-      "@org/server/my-app": ["libs/server/my-app/src/index.ts"]
+      "@org/server/my-app": ["libs/server/my-app/src/index.ts"],
+      "@org/browser/my-app-ang": ["libs/browser/my-app-ang/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
